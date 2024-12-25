@@ -17,6 +17,8 @@ import { BiSearch } from 'react-icons/bi'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 import Wrapper from '../shareable/Wrapper'
+import Image from 'next/image'
+
 
 
 
@@ -56,7 +58,7 @@ const Headertop =  async () => {
 
       <div>
 
-<img src={urlFor(res.logo).url()} alt='' height={50} width={50}/>
+<Image src={urlFor(res.logo).url()} alt=' ' height={50} width={50}/>
 
       </div>
 
