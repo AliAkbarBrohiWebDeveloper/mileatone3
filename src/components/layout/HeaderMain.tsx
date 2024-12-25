@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { BiCart, BiHeart, BiSearch,  } from 'react-icons/bi'
 
 
-import Image from 'next/image'
 import Wrapper from '../shareable/Wrapper'
   
 
@@ -18,7 +17,7 @@ const Headermain = () => {
 
 
         <div>
-{/* <Image src={'/vector1.png'} alt='' height={50} width={100}/> */}
+
 
 
         </div>
