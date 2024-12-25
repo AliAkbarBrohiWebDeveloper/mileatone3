@@ -31,7 +31,7 @@ const result=await client.fetch(` *[_type == "featureSection"][0]{
       </div>
 
       <main className='h-[700px] w-[100%] mt-16'>
-<Image src={urlFor(result.image).url()} alt=''/>
+<Image src={urlFor(result.image).url()} alt='' height={700} width={700}/>
 
       </main>
       <div className='text-center mt-3'>

@@ -1,6 +1,7 @@
 import Wrapper from '@/components/shareable/Wrapper';
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image';
+import Image from 'next/image';
 import React from 'react'
 
 
@@ -32,7 +33,7 @@ import React from 'react'
           GearUp.map((item:any) => {
             return (
               <div key={item.id} className='text-center'>
-                <img src={urlFor(item.src).url()} alt='' height={441} width={441} className='mx-auto' />
+                <Image src={urlFor(item.src).url()} alt='' height={441} width={441} className='mx-auto' />
                 <h3 className='mt-4 text-lg font-semibold'>{item.header}</h3>
                 <p>{item.para}</p>
               </div>
