@@ -1,0 +1,79 @@
+import { client } from '@/sanity/lib/client';
+import { urlFor } from '@/sanity/lib/image';
+
+import React from 'react';
+import Wrapper from '../shareable/Wrapper';
+
+
+
+
+const  Hero = async () => {
+
+
+    const res=await client.fetch(`
+  *[_type == "heroSection"][0]{
+    image,
+        heading,
+        heading1,
+        paragraph,
+      buttonText,
+          button1Text
+         
+         
+     }`)
+       console.log(res);
+       
+
+
+  return (
+    <Wrapper>
+   
+    <section className='mt-10'>
+
+      <div className='text-center'>
+
+        <h2 className='font-bold'>Hello Nike App</h2>
+        <p className='text-sm'>Download the app to access everything Nike. Get Your Great</p>
+      </div>
+      <main className="relative md:h-[700px] h-[300px] w-auto ">
+
+        <img src={urlFor(res.image).url()} alt='hero-section' height={500} width={500} className='relative md:h-[700px] h-[300px] md:w-full w-auto'/>
+
+       
+      </main>
+
+      <div className='text-center mt-28'>
+
+<h4>{res.heading}</h4>
+<h3 className='text-5xl font-semibold'>{res.heading1}</h3>
+<p className='mt-4'>{res.paragraph}.</p>
+<div className='flex justify-center items-center gap-x-9 mt-3'>
+<button className='px-6 py-2 bg-black text-white rounded-lg hover:scale-105 duration-300'>{res.buttonText}</button>
+    <button className='px-6 py-2 bg-black text-white rounded-lg hover:scale-105 duration-300'>{res.button1Text}</button>
+
+</div>
+
+
+
+      </div>
+
+      
+      
+    </section>
+    </Wrapper>
+   
+  );
+}
+
+export default Hero;
+
+
+
+
+
+
+
+
+
+
+
