@@ -31,7 +31,7 @@ const result=await client.fetch(` *[_type == "missSection"][0]{
       </div>
 
       <main className='h-[700px] w-[100%] mt-16'>
-<Image src={urlFor(result.image).url()} alt='' height={500} width={500}/>
+<Image src={urlFor(result.image).url()} alt='' height={500} width={500} className='h-[700px] w-[100%]'/>
 
       </main>
       <div className='text-center mt-3'>
