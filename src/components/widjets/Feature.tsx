@@ -3,6 +3,7 @@ import React from 'react'
 import Wrapper from '../shareable/Wrapper';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
+import Image from 'next/image';
 
 
 
@@ -30,7 +31,7 @@ const result=await client.fetch(` *[_type == "featureSection"][0]{
       </div>
 
       <main className='h-[700px] w-[100%] mt-16'>
-<img src={urlFor(result.image).url()} alt=''/>
+<Image src={urlFor(result.image).url()} alt=''/>
 
       </main>
       <div className='text-center mt-3'>

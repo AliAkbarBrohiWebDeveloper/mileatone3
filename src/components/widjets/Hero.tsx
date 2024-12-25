@@ -3,6 +3,7 @@ import { urlFor } from '@/sanity/lib/image';
 
 import React from 'react';
 import Wrapper from '../shareable/Wrapper';
+import Image from 'next/image';
 
 
 
@@ -37,7 +38,7 @@ const  Hero = async () => {
       </div>
       <main className="relative md:h-[700px] h-[300px] w-auto ">
 
-        <img src={urlFor(res.image).url()} alt='hero-section' height={500} width={500} className='relative md:h-[700px] h-[300px] md:w-full w-auto'/>
+        <Image src={urlFor(res.image).url()} alt='hero-section' height={500} width={500} className='relative md:h-[700px] h-[300px] md:w-full w-auto'/>
 
        
       </main>
