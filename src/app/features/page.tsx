@@ -5,9 +5,12 @@ import Image from 'next/image';
 import React from 'react'
 
 
-
-
-
+interface Iitem{
+  id:number,
+  header:string,
+  para:string,
+  src:string
+}
 
  async function Airpage() {
     const AirMax=await client.fetch(`*[_type == "airMax"]{
@@ -30,7 +33,7 @@ import React from 'react'
     
     <div className='flex justify-center gap-4 mt-28 flex-col sm:flex-row'>
         {
-          AirMax.map((item:any) => {
+          AirMax.map((item:Iitem) => {
             return (
               <div key={item.id} className='text-center'>
                 <Image src={urlFor(item.src).url()} alt='' height={441} width={441} className='mx-auto' />

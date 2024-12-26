@@ -5,7 +5,12 @@ import Image from 'next/image';
 import React from 'react'
 
 
-
+interface Item{
+  id:number,
+  header:string,
+  para:string,
+  src:string
+}
 
 
 
@@ -30,7 +35,7 @@ import React from 'react'
     
     <div className='flex justify-center gap-4 mt-28 flex-col sm:flex-row'>
         {
-          GearUp.map((item:any) => {
+          GearUp.map((item:Item) => {
             return (
               <div key={item.id} className='text-center'>
                 <Image src={urlFor(item.src).url()} alt='' height={441} width={441} className='mx-auto' />
