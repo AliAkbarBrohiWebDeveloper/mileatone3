@@ -1,9 +1,11 @@
+import Button2 from '@/components/shareable/Button'
 import Wrapper from '@/components/shareable/Wrapper'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
 
 
 interface IProducts{
@@ -35,6 +37,10 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
      }
     
     `)
+
+
+    console.log(`Total products fetched: ${proresult.length}`);
+
     console.log(proresult);
     
 
@@ -44,7 +50,7 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
       <section className="py-8">
         <main className="flex flex-col md:flex-row gap-8 md:gap-16">
           
-          {/* Filters Section */}
+          
           <div className="w-full md:w-1/4">
             <h3 className="font-bold text-lg">New (500)</h3>
             <ul className="space-y-2 mt-4">
@@ -112,11 +118,11 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
              </div>
           </div> 
         </main>
-{/* <div>
+<div>
 
 <h4 className='text-xl font-bold'>Related Categories</h4>
-</div> */}
-{/* <div className='flex flex-col md:flex-row items-center '>
+</div>
+ <div className='flex flex-col md:flex-row items-center '>
 <Button2 text='Best Selling Products'/>
 <Button2 text='Best Shoes'/>
 <Button2 text='New Basketball Shoes'/>
@@ -134,7 +140,7 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
 <Button2 text='Best Womens Shoes'/>
 <Button2 text='Best Training & Gym'/>
 
-</div> */}
+</div> 
 
 
 
@@ -149,3 +155,37 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
 }
 
 export default Products
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -76,7 +76,7 @@ const Headertop =  async () => {
   <Link href={'help'}>{res.Help}</Link>
 
 
-  <Link href={'/join'}>{res.Join}</Link>
+  <Link href={'/Join'}>{res.Join}</Link>
 
 
     <Link href={'/sign'}>{res.Sign}</Link>
@@ -117,7 +117,7 @@ const Headertop =  async () => {
   <Link href={'help'}>{res.Help}</Link>
 
 
-  <Link href={'/join'}>{res.Join}</Link>
+  <Link href={'/Join'}>{res.Join}</Link>
 
 
     <Link href={'/sign'}>{res.Sign}</Link>
