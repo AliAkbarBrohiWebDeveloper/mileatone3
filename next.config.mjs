@@ -6,6 +6,8 @@ const nextConfig = {
         remotePatterns:[
           {
             hostname:"cdn.sanity.io"
+            
+
           }
         ]
         },

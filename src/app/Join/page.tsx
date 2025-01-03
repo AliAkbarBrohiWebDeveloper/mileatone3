@@ -1,16 +1,30 @@
+import { client } from '@/sanity/lib/client'
+import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 
-const Joinpage = () => {
+const Joinpage =  async () => {
+const response=await client.fetch(`
+   *[_type == "joinSection"][0]{
+       
+       image
+         
+     }
+  
+  
+  `)
+
+console.log(response);
+
   return (
     <section className='mt-14'>
 
 <main className=" text-center">
 
 <div className='flex justify-center items-center'>
-<Image src={'/vector1.png'} alt='' height={17} width={200}/>
+<Image src={urlFor(response.image).url()} alt='' height={17} width={200}/>
 
   </div>
 

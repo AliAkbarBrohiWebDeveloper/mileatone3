@@ -1,9 +1,20 @@
+import { client } from '@/sanity/lib/client'
+import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 
-const SignIpage = () => {
+const SignIpage = async () => {
+
+const data=await client.fetch(`*[_type == "signSection"][0]{
+       
+       image
+         
+     }
+  `)
+console.log(data);
+
   return (
     <section className="mt-12">
 
@@ -11,7 +22,8 @@ const SignIpage = () => {
 
 
   <div className='flex justify-center items-center'>
-<Image src={'/vector1.png'} alt='' height={17} width={200}/>
+
+<Image src={urlFor(data.image).url()} alt='logo' height={17} width={200}/>
 
   </div>
 
@@ -35,7 +47,7 @@ const SignIpage = () => {
 
 <p className="mt-3">Not A Member
 
-<Link href={'join'} className="font-bold underline"> join us</Link>
+<Link href={'Join'} className="font-bold underline"> join us</Link>
 
 </p>
 

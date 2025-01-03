@@ -7,8 +7,10 @@ import GearUp from './Gear'
 import missSection from './miss'
 import EssanSection from './Essan'
 import Products from './products'
+import SignSection from './sign'
+import JoinSection from './join'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [navbar,HeroSection,airmax,feature1Section,GearUp,missSection,EssanSection,Products]
+  types: [navbar,HeroSection,airmax,feature1Section,GearUp,missSection,EssanSection,Products,SignSection,JoinSection]
 }

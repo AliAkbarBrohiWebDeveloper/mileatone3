@@ -4,6 +4,7 @@ import { urlFor } from '@/sanity/lib/image';
 import React from 'react';
 import Wrapper from '../shareable/Wrapper';
 import Image from 'next/image';
+import Button from '../shareable/Button2';
 
 
 
@@ -49,9 +50,8 @@ const  Hero = async () => {
 <h3 className='text-5xl font-semibold'>{res.heading1}</h3>
 <p className='mt-4'>{res.paragraph}.</p>
 <div className='flex justify-center items-center gap-x-9 mt-3'>
-<button className='px-6 py-2 bg-black text-white rounded-lg hover:scale-105 duration-300'>{res.buttonText}</button>
-    <button className='px-6 py-2 bg-black text-white rounded-lg hover:scale-105 duration-300'>{res.button1Text}</button>
-
+<Button text={res.buttonText}/>
+<Button text={res.button1Text}/>
 </div>
 
 
