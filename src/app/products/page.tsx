@@ -3,7 +3,6 @@ import Wrapper from '@/components/shareable/Wrapper'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 
@@ -105,13 +104,13 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
               {
                 proresult.map((item:IProducts) => (
                   <div key={item.id} className="flex flex-col items-center text-center border p-4 rounded-lg hover:shadow-md transition duration-300">
-                   <Link href={`/products/${item.id}`}> <Image src={urlFor(item.src).url()} alt={item.header1} height={348} width={348} className="mb-4" />
+                   \ <Image src={urlFor(item.src).url()} alt={item.header1} height={348} width={348} className="mb-4" />
                     <span className=" text-[#9E3500] font-semibold text-xl">{item.header1}</span>
                     <h5 className="font-semibold text-lg mt-2">{item.header2}</h5>
                     <p className="text-sm text-gray-700">{item.shoes}</p>
                     <p className="text-sm text-gray-500">{item.color}</p>
                     <span className="font-bold mt-2">{item.price}</span>
-                    </Link>
+                 
                   </div> 
                  ))
               } 

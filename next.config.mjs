@@ -5,7 +5,9 @@ const nextConfig = {
     images: {
         remotePatterns:[
           {
-            hostname:"cdn.sanity.io"
+            hostname:"cdn.sanity.io",
+            // pathname:"https",
+            // images:"/images//*"
             
 
           }
