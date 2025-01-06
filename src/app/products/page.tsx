@@ -37,9 +37,6 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
     
     `)
 
-
-    console.log(`Total products fetched: ${proresult.length}`);
-
     console.log(proresult);
     
 
