@@ -101,7 +101,7 @@ const proresult=await client.fetch(`  *[_type == "productsSection"]{
               {
                 proresult.map((item:IProducts) => (
                   <div key={item.id} className="flex flex-col items-center text-center border p-4 rounded-lg hover:shadow-md transition duration-300">
-                   \ <Image src={urlFor(item.src).url()} alt={item.header1} height={348} width={348} className="mb-4" />
+                    <Image src={urlFor(item.src).url()} alt={item.header1} height={348} width={348} className="mb-4" />
                     <span className=" text-[#9E3500] font-semibold text-xl">{item.header1}</span>
                     <h5 className="font-semibold text-lg mt-2">{item.header2}</h5>
                     <p className="text-sm text-gray-700">{item.shoes}</p>
